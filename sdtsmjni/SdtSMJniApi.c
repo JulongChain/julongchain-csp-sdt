@@ -1,5 +1,5 @@
 #include <memory.h>
-#include "org_bcia_javachain_csp_gm_sdt_jni_SMJniApi.h"
+#include "org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi.h"
 #include "SdtSM.h"
 
 #define MAX_OUT_LEN				4096
@@ -65,7 +65,7 @@ void releasePtrArray(JNIEnv *env, jbyteArray bytearray, jbyte* bytesPtr)
  * Method:    nRandomGen
  * Signature: (I)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nRandomGen
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nRandomGen
   (JNIEnv *env, jobject obj, jint length)
 {
 	jbyteArray jbaOutData = NULL;
@@ -114,7 +114,7 @@ F_EXIT:
  * Method:	nSM2MakeKey
  * Signature: ([BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2MakeKey
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2MakeKey
 	(JNIEnv *env, jobject obj, jbyteArray sk, jint skLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -180,7 +180,7 @@ F_EXIT:
  * Method:	  nSM2KDF
  * Signature: ([BII)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2KDF
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2KDF
   (JNIEnv *env, jobject obj, jbyteArray key, jint keyLen, jint length)
 {
 	jbyteArray jbaOutData = NULL;
@@ -247,7 +247,7 @@ F_EXIT:
  * Method:	nSM2Sign
  * Signature: ([BI[BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2Sign
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2Sign
   (JNIEnv *env, jobject obj, jbyteArray hash, jint hashLen, jbyteArray random, jint randomLen, jbyteArray sk, jint skLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -327,7 +327,7 @@ F_EXIT:
  * Method:	nSM2Verify
  * Signature: ([BI[BI[BI)I
  */
-JNIEXPORT jint JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2Verify
+JNIEXPORT jint JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2Verify
   (JNIEnv *env, jobject obj, jbyteArray hash, jint hashLen, jbyteArray pk, jint pkLen, jbyteArray signData, jint signDataLen)
 {
 	unsigned char *pucHash = NULL;
@@ -379,7 +379,7 @@ F_EXIT:
  * Method:	nSM2Encrypt
  * Signature: ([BI[BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2Encrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2Encrypt
   (JNIEnv *env, jobject obj, jbyteArray plainData, jint plainDataLen, jbyteArray random, jint randomLen, jbyteArray pk, jint pkLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -459,7 +459,7 @@ F_EXIT:
  * Method:	nSM2Decrypt
  * Signature: ([BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM2Decrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM2Decrypt
   (JNIEnv *env, jobject obj, jbyteArray cipherData, jint cipherDataLen, jbyteArray sk, jint skLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -532,7 +532,7 @@ F_EXIT:
  * Method:	nSM3Hash
  * Signature: ([BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM3Hash
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM3Hash
   (JNIEnv *env, jobject obj, jbyteArray message, jint messageLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -599,7 +599,7 @@ F_EXIT:
  * Method:	nSM4ECBEncrypt
  * Signature: ([BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM4ECBEncrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM4ECBEncrypt
   (JNIEnv *env, jobject obj, jbyteArray key, jint keyLen, jbyteArray plainData, jint plainDataLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -672,7 +672,7 @@ F_EXIT:
  * Method:	nSM4ECBDecrypt
  * Signature: ([BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM4ECBDecrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM4ECBDecrypt
   (JNIEnv *env, jobject obj, jbyteArray key, jint keyLen, jbyteArray cipherData, jint cipherDataLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -745,7 +745,7 @@ F_EXIT:
  * Method:	nSM4CBCEncrypt
  * Signature: ([BI[BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM4CBCEncrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM4CBCEncrypt
   (JNIEnv *env, jobject obj, jbyteArray key, jint keyLen, jbyteArray iv, jint ivLen, jbyteArray plainData, jint plainDataLen)
 {
 	jbyteArray jbaOutData = NULL;
@@ -826,7 +826,7 @@ F_EXIT:
  * Method:	nSM4CBCDecrypt
  * Signature: ([BI[BI[BI)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_org_bcia_javachain_csp_gm_sdt_jni_SMJniApi_nSM4CBCDecrypt
+JNIEXPORT jbyteArray JNICALL Java_org_bcia_julongchain_csp_gm_sdt_jni_SMJniApi_nSM4CBCDecrypt
   (JNIEnv *env, jobject obj, jbyteArray key, jint keyLen, jbyteArray iv, jint ivLen, jbyteArray cipherData, jint cipherDataLen)
 {
 	jbyteArray jbaOutData = NULL;
