@@ -8,7 +8,7 @@
 
 ## 编译说明
 1. 从GitLab下载项目源码，下载地址为http://gitlab.bcia.net.cn:6060/bcia/julongchain-csp-sdt.git。
-2. 在Linux系统(推荐使用ubuntu16.04，内核版本4.4.0，gcc版本为5.4.0)，源码所在目录中执行如下命令：
+2. 在Linux系统(推荐使用ubuntu16.04，内核版本为4.4.0，gcc版本为5.4.0)，源码所在目录中执行如下命令：
    ```
    $ make
    ```
